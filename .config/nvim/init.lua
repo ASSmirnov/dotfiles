@@ -8,7 +8,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
-	
+
 -- highlight yank
 vim.cmd[[
     augroup highlight_yank
@@ -18,7 +18,6 @@ vim.cmd[[
 ]]
 
 -- Configure plugins
-	
 require("nvim-tree").setup{
     view = {
         mappings = {

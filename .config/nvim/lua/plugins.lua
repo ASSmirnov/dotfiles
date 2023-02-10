@@ -36,5 +36,16 @@ return require('packer').startup(function(use)
   
   -- Languages support
   use { 'neoclide/coc.nvim', branch='release' } 
+
+  
+  -- Easy motion
+  use {
+    "ggandor/leap.nvim",
+    config = function() require("leap").set_default_keymaps() end
+  }
+  use {
+    'unblevable/quick-scope'
+  }
+
 end)
 

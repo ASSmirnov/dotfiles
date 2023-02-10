@@ -80,6 +80,16 @@ require('nvim-treesitter.configs').setup {
 require("coc_config")
 
 
+-- Easy Motion
+-- leap (vim sneak descendant)
+require('leap').add_default_mappings()
+vim.g.qs_highlight_on_keys = {'f', 'F', 't', 'T'}
+vim.cmd([[
+    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+]])
+
+
 -- Color scheme
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])

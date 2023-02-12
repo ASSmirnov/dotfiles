@@ -75,6 +75,19 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
+local telescope = require('telescope.builtin')
+local oldfiles = function() 
+
+	telescope.oldfiles{cwd_only=true}
+
+end
+
+
+vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
+vim.keymap.set('n', '<leader>fg', telescope.live_grep, {})
+vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
+vim.keymap.set('n', '<leader>fh', telescope.help_tags, {})
+vim.keymap.set('n', '<leader>fr', oldfiles, {})
 
 -- Configure COC
 require("coc_config")
